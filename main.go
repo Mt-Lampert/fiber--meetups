@@ -23,8 +23,8 @@ func main() {
 
 	app.Get("/", func(c *fiber.Ctx) error {
 		t_data := fiber.Map{
-			"Name": "Jackie",
-			"Host": "Fiber Meetups",
+			"Name": "Matthew",
+			"Host": "Meetups Inc.",
 		}
 		return c.Render("index", t_data)
 	})
