@@ -8,6 +8,7 @@ import (
 // defining the Template engine
 // templates are files inside `./views` and its subdirectories
 // that end with `.go.html`
+// the engine will have them all cached!
 var engine = html.New("./views", ".go.html")
 
 func main() {
@@ -21,13 +22,7 @@ func main() {
 	// ./static/css/main.css => http://localhost:3000/css/main.css
 	app.Static("/", "./static")
 
-	app.Get("/", func(c *fiber.Ctx) error {
-		t_data := fiber.Map{
-			"Name": "Matthew",
-			"Host": "Meetups Inc.",
-		}
-		return c.Render("index", t_data)
-	})
+	app.Get("/", index)
 
 	app.Listen(":3000")
 }
