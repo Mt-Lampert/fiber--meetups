@@ -15,6 +15,12 @@ func main() {
 		Views: engine,
 	})
 
+	// access static files
+	//
+	// ./static/js/htmx.js   => http://localhost:3000/js/htmx.js
+	// ./static/css/main.css => http://localhost:3000/css/main.css
+	app.Static("/", "./static")
+
 	app.Get("/", func(c *fiber.Ctx) error {
 		t_data := fiber.Map{
 			"Name": "Jackie",
