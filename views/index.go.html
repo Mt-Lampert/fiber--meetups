@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meetup</title>
+    <!-- go for the Monserrat Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/main.css">
     <script src="/js/htmx.min.js"></script>
 </head>
-<body>
+<body class="font-monserrat ">
     <h1 class="text-emerald-800 text-2xl">Hello, {{ .Name }}</h1>
     <p>This is <span class="text-red-800 font-semibold">{{ .Host }}</span> at your disposal!</p>
 
-    <p> <button class="btn bg-emerald-800 text-gray-100 min-h-2 h-2">Button</button></p>
+    <p> <button class="btn bg-emerald-800 text-gray-100">Button</button></p>
 </body>
 </html>
