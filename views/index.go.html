@@ -12,9 +12,12 @@
     <script src="/js/htmx.min.js"></script>
 </head>
 <body class="font-monserrat ">
-    <h1 class="text-emerald-800 text-2xl">Hello, {{ .Name }}</h1>
-    <p>This is <span class="text-red-800 font-semibold">{{ .Host }}</span> at your disposal!</p>
-
-    <p> <button class="btn bg-emerald-800 text-gray-100">Button</button></p>
+  <div class="container mx-auto py-4 px-8 flex justify-between gap-12">
+    {{ range . }}
+    {{ template "meetup" . }}
+    {{ end }}
+  </div>
 </body>
+
+
 </html>
