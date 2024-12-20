@@ -1,5 +1,6 @@
 node_modules/
 static/css/
+static/images/
 tmp/
 
 go.sum

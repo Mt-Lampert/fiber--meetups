@@ -1,6 +1,14 @@
 {{ define "meetup" }}
-<div class="container px-8 py-4 border-2 border-emerald-300 rounded-md">
-    <h1 class="text-3xl text-emerald-300 pb-4">{{ .Title }}</h1>
-    <p>This one will be in {{ .Location }} on {{ .Date }}. Enjoy!</p>
+<div class="container px-8 py-4 border-2 border-emerald-300 rounded-md flex flex-col items-center xl:flex-row gap-8">
+    <div class="flex-auto w-1/2 md:w-1/4">
+        <img src='{{ printf "/images/%s" .Image }}' alt="{{ .ImgAlt }}">
+    </div>
+    <div class="flex-grow">
+        <h1 class="text-3xl text-emerald-300 pb-4">{{ .Title }}</h1>
+        <p>
+          This one will be in <span class="font-bold">{{ .Location }}</span> 
+          on <span class="font-bold">{{ .Date }}</span>. Enjoy!
+        </p>
+    </div>
 </div>
 {{ end }}

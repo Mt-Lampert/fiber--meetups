@@ -12,7 +12,7 @@
     <script src="/js/htmx.min.js"></script>
 </head>
 <body class="font-monserrat ">
-  <div class="container mx-auto py-4 px-8 flex justify-between gap-12">
+  <div class="container mx-auto py-4 px-8 flex flex-col gap-16 lg:flex-row">
     {{ range . }}
     {{ template "meetup" . }}
     {{ end }}
